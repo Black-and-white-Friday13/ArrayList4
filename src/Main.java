@@ -13,25 +13,31 @@ public class Main {
             ArrayList<Integer> newList1  = new ArrayList<Integer>();
             ArrayList<Integer> newList2  = new ArrayList<Integer>();
             ArrayList<Integer> newList3 = new ArrayList<Integer>();
-            for (int i = 0; i < 20; i++)
+            for (int i = 1; i < 21; i++)
             {
                 newList.add(Integer.parseInt(reader.readLine()));
             }
-            for (int a : newList)
+            for (int b : newList)
             {
-                if (a % 3 == 0)
-                {
-                    newList1.add(a);
-                }
-                else if (a % 2 == 0)
-                {
-                    newList2.add(a);
-                }
-                else
-                {
-                    newList3.add(a);
-                }
+                    if (b % 3 == 0 && b % 2 == 0)
+                    {
+                        newList1.add(b);
+                        newList2.add(b);
+                    }
+                    else if  (b % 3 == 0)
+                    {
+                        newList1.add(b);
+                    }
+                    else if (b % 2 == 0)
+                    {
+                        newList2.add(b);
+                    }
+                    else
+                    {
+                        newList3.add(b);
+                    }
             }
+
                 printList(newList1);
                 printList(newList2);
                 printList(newList3);
@@ -39,7 +45,8 @@ public class Main {
 
     public static void printList(List<Integer> list)
     {
-        System.out.println(list);
+        for (int v : list)
+        System.out.println(v);
     }
 }
 
